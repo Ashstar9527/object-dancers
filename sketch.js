@@ -37,11 +37,11 @@ class AshleyDancer {
     this.x = startX;
     this.y = startY;
     this.t = 0;
-    this.starPhases = [0, PI, PI * 0.5, PI * 1.5];
-    this.starX = [50, 50, 40, 40];
-    this.starY = [16, 16, 10, 10];
-    this.starSize = [7, 5, 4, 3];
-    this.starSpd = [1, 1, 1.6, 1.6];
+    this.starPhases = [0, PI, PI * 0.5, PI * 1.5, PI * 2, PI * 2.5];
+    this.starX = [80, 80, 70, 70, 60, 60];
+    this.starY = [26, 26, 20, 20, 14, 14];
+    this.starSize = [7, 6, 5, 4, 3, 2];
+    this.starSpd = [1, 1, 1.6, 1.6, 2, 2];
   }
 
   update() {
@@ -132,7 +132,7 @@ class AshleyDancer {
       pop()
 
       // Orbit stars
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 6; i++) {
         let angle = t * this.starSpd[i] + this.starPhases[i];
         let sx = cos(angle) * this.starX[i];
         let sy = sin(angle) * this.starY[i];
